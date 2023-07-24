@@ -23,7 +23,8 @@ const Page = () => {
 
       if (newSearchURL.length > 0) {
         try {
-          await fetch(`/api/hello?${newSearchURL}`).then(async (res) => {
+          await fetch(`/api/hello?${newSearchURL}`)
+          .then(async (res) => {
             const data: Product[] = await res.json();
             console.log('data received from backend: ');
             console.log(data);

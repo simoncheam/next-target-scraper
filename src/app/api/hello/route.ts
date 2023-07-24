@@ -25,13 +25,19 @@ export async function GET(request: Request, res: NextApiResponse) {
   try {
     console.log('handleStartDriver');
     await handleStartDriver();
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+
+    // incrementally scroll
+    console.log('handleDriverScroll');
+    await handleDriverScroll();
     await new Promise((resolve) => setTimeout(resolve, 3000));
     console.log('handleDriverScroll');
     await handleDriverScroll();
     await new Promise((resolve) => setTimeout(resolve, 3000));
+
     console.log('handleDriverEvents');
     await handleDriverEvents();
-    await new Promise((resolve) => setTimeout(resolve, 4000));
+    await new Promise((resolve) => setTimeout(resolve, 6000));
 
     handleDriverQuit();
 
@@ -79,7 +85,7 @@ export async function GET(request: Request, res: NextApiResponse) {
 
         //** */ get product Image
         const imgElement = await driver.findElement(By.css(`img[alt="${productTitle}"]`)); //? this works in some cases
-        const productImgLink = (await imgElement.getAttribute('src')) ?? (await imgElement.getAttribute('srcset'));
+        const productImgLink = (await imgElement.getAttribute('srcset')) || (await imgElement.getAttribute('src'));
 
         //** */ replace image link with higher quality image
         let newProductImgLink = productImgLink.replace(
@@ -92,7 +98,7 @@ export async function GET(request: Request, res: NextApiResponse) {
           productTitle: productTitle,
           productHref: productHref,
           productImgLink:
-            newProductImgLink || 'https://qph.cf2.quoracdn.net/main-qimg-1a4bafe2085452fdc55f646e3e31279c-lq',
+            newProductImgLink ?? 'https://qph.cf2.quoracdn.net/main-qimg-1a4bafe2085452fdc55f646e3e31279c-lq',
         };
 
         //push each prodObj into prodArray as loop continues

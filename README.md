@@ -1,9 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Video Demo
+
+[>>> Click to Watch The Demo](https://www.loom.com/share/5be8272b56de4f9caa534305f29d02df?sid=95d83e87-6305-4c2c-b6cc-ccb48853798d)
+
+
 ## Getting Started
 
 Prerequisites:
-Before starting the development server, you must:
+Before starting the local development server, you must:
 
 ```
 1. Ensure correct ChromeDriver is installed on your respective OS.
