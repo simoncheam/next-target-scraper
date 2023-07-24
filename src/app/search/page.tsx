@@ -3,7 +3,7 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { Product } from '../api/hello/route';
 import ProductCard from '../../../components/ProductCard';
 
-export let productJson = [];
+// export let productJson = [];
 
 const Page = () => {
   const [searchTerm, setSearchTerm] = useState('');
