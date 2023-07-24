@@ -6,8 +6,8 @@ Prerequisites:
 Before starting the development server, you must:
 
 ```
-1. Ensure correct ChromeDriver is installed for your respective OS.
-This is required to use Selenium WebDriver:
+1. Ensure correct ChromeDriver is installed on your respective OS.
+This is required to use Selenium WebDriver to scrape Target's site for product data:
 ```
 [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
 (chromedriver_mac_arm64 recommended for macOS M1)
@@ -28,7 +28,7 @@ How to use:
 - Once your local server is started using Google Chrome, find the search input on the search page
 - Enter and submit a search query, (example: water filters)
 - Click on product title or image to navigate to product detail page
-- Click rest to clear results or submit a new search query to find more products
+- Click reset to clear results or submit a new search query to find more products
 
 Expectations:
 - After submitting a search query, the app with fetch product information by opening up another browser window.
