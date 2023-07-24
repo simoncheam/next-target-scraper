@@ -8,10 +8,11 @@ Before starting the development server, you must:
 ```
 1. Ensure correct ChromeDriver is installed for your respective OS.
 This is required to use Selenium WebDriver:
-https://chromedriver.chromium.org/downloads
-
+```
+[https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
 (chromedriver_mac_arm64 recommended for macOS M1)
 
+```
 2. run `npm install`
 ```
 
@@ -27,6 +28,7 @@ How to use:
 - Once the server is started, find the search input on the search page
 - Enter and submit a search query, (example: water filters)
 - Click on product title or image to navigate to product detail page
+- Click rest to clear results or submit a new search query to find more products
 
 Expectations:
 - After submitting a search query, the app with fetch product information by opening up another browser window.
