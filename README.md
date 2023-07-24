@@ -25,7 +25,7 @@ yarn dev
 ```
 
 How to use:
-- Once the server is started, find the search input on the search page
+- Once your local server is started using Google Chrome, find the search input on the search page
 - Enter and submit a search query, (example: water filters)
 - Click on product title or image to navigate to product detail page
 - Click rest to clear results or submit a new search query to find more products
