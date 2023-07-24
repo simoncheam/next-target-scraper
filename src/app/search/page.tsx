@@ -26,7 +26,7 @@ const Page = () => {
           await fetch(`/api/hello?${newSearchURL}`).then(async (res) => {
             const data: Product[] = await res.json();
             console.log('data received from backend: ');
-            console.log(data); //* IT WORKS
+            console.log(data);
             setResults(data);
             setLoading(false);
             return data;
@@ -72,7 +72,6 @@ const Page = () => {
     <main className='bg-slate-100 flex min-h-screen min-w-full flex-col items-center justify-between p-5 '>
       <div className='w-full sm:w-3/4 md:w-4/5 lg:w-1/2 mx-auto mt-3'>
         <div className=' text-center '>
-          {/* <!-- child elements will be placed in the grid --> */}
           <div className=' flex justify-center md:flex md:items-center md:justify-between'>
             <div className='min-w-0 flex-1'>
               <h2 className='text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight'>
